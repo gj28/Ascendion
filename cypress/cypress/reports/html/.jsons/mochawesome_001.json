@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-06T06:46:57.474Z",
+    "end": "2024-12-06T06:58:16.220Z",
+    "duration": 678746,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a4f0ebb1-a0cf-4d9a-8c7a-b0cfad23788b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\datadriven.cy.js",
+      "file": "cypress\\e2e\\datadriven.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31b1c149-e792-402a-ab22-39b50f6881f9",
+          "title": "Data-driven login test with text verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should test login functionality for multiple users",
+              "fullTitle": "Data-driven login test with text verification Should test login functionality for multiple users",
+              "timedOut": null,
+              "duration": 670932,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Import the data from the JSON file\nconst loginData = __webpack_require__(/*! ../fixtures/data.json */ \"./cypress/fixtures/data.json\");\n// Visit the initial page\ncy.visit('https://www.rmkec.ac.in/2023/');\n// Wait for the initial page to load\ncy.wait(1000);\n// Close the initial popup\ncy.get('button[aria-label=\"Close\"]').click();\n// Verify the 'CP Tracker' link exists and click it\ncy.xpath(\"//li[@id='menu-item-6337']//a[contains(text(),'Contact Us')]\").should('be.visible').click();\n// Wait for the new page to load\ncy.url().should('include', 'contact-us'); // Validate URL change\ncy.get('.left-menu > :nth-child(2) > a').click();\ncy.wait(5000); // Allow time for the new page to fully render\n// Loop through each user in the data\nloginData.userData.forEach(user => {\n  // Use userData instead of loginData\n  // Fill out the form with user data\n  cy.iframe('iframe').find('input[placeholder=\"Enter your Name\"]').type(user.name);\n  cy.iframe('iframe').find('#type').select(user.type);\n  cy.iframe('iframe').find('input[placeholder=\"Enter Student Register Number\"]').type(user.registerNumber);\n  cy.iframe('iframe').find('#department').select(user.department);\n  cy.iframe('iframe').find('input[placeholder=\"Enter your Batch\"]').type(user.batch);\n  cy.iframe('iframe').find('input[placeholder=\"Enter your Email\"]').type(user.email);\n  cy.iframe('iframe').find('input[placeholder=\"Enter your Mobile Number\"]').type(user.mobileNumber);\n  cy.iframe('iframe').find('textarea[placeholder=\"Enter your Grievence\"]').should('be.visible').type(user.grievance);\n  cy.iframe('iframe').find('input[placeholder=\"Enter your Aadhar Number\"]').type(user.aadharNumber);\n  // Submit the form\n  submitForm();\n  // Click the link and wait for the new page to load\n  cy.get('.topHeader > .container > .row > :nth-child(1) > .site_logo > .logo > .siteName').click();\n  // Wait for the initial page to load\n  cy.wait(1000);\n  // Close the initial popup\n  cy.get('button[aria-label=\"Close\"]').click();\n  // Verify the 'CP Tracker' link exists and click it\n  cy.xpath(\"//li[@id='menu-item-6337']//a[contains(text(),'Contact Us')]\").should('be.visible').click();\n  // Wait for the new page to load\n  cy.url().should('include', 'contact-us'); // Validate URL change\n  cy.get('.left-menu > :nth-child(2) > a').click();\n  cy.wait(5000); // Allow time for the new page to fully render\n});",
+              "err": {},
+              "uuid": "3cbbe8f0-a20a-453c-9835-d88abf151530",
+              "parentUUID": "31b1c149-e792-402a-ab22-39b50f6881f9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3cbbe8f0-a20a-453c-9835-d88abf151530"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 670932,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

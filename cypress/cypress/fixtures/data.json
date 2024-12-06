@@ -1,0 +1,214 @@
+{
+    "userData": [
+      {
+        "name": "Gaurav",
+        "type": "Student",
+        "registerNumber": "1234567890",
+        "department": "Civil",
+        "batch": "12",
+        "email": "gaurav@gmail.com",
+        "mobileNumber": "1234567890",
+        "grievance": "test test test",
+        "aadharNumber": "123456789012"
+      },
+      {
+        "name": "Ayushi",
+        "type": "Student",
+        "registerNumber": "0987654321",
+        "department": "Computer Science",
+        "batch": "13",
+        "email": "ayushi@gmail.com",
+        "mobileNumber": "0987654321",
+        "grievance": "another test grievance",
+        "aadharNumber": "098765432109"
+      },
+      {
+        "name": "Ravi",
+        "type": "Student",
+        "registerNumber": "1122334455",
+        "department": "Mechanical",
+        "batch": "14",
+        "email": "ravi@gmail.com",
+        "mobileNumber": "1122334455",
+        "grievance": "No grievance",
+        "aadharNumber": "112233445566"
+      },
+      {
+        "name": "Sneha",
+        "type": "Student",
+        "registerNumber": "2233445566",
+        "department": "Electrical And Electronics",
+        "batch": "15",
+        "email": "sneha@gmail.com",
+        "mobileNumber": "2233445566",
+        "grievance": "Issue with project submission",
+        "aadharNumber": "223344556677"
+      },
+      {
+        "name": "Ankit",
+        "type": "Student",
+        "registerNumber": "3344556677",
+        "department": "Electronics And Communication",
+        "batch": "16",
+        "email": "ankit@gmail.com",
+        "mobileNumber": "3344556677",
+        "grievance": "Missing materials for project",
+        "aadharNumber": "334455667788"
+      },
+      {
+        "name": "Priya",
+        "type": "Student",
+        "registerNumber": "4455667788",
+        "department": "Electronics And Instrumentation",
+        "batch": "17",
+        "email": "priya@gmail.com",
+        "mobileNumber": "4455667788",
+        "grievance": "No issues",
+        "aadharNumber": "445566778899"
+      },
+      {
+        "name": "Raj",
+        "type": "Student",
+        "registerNumber": "5566778899",
+        "department": "Information Technology",
+        "batch": "18",
+        "email": "raj@gmail.com",
+        "mobileNumber": "5566778899",
+        "grievance": "Late response from faculty",
+        "aadharNumber": "556677889900"
+      },
+      {
+        "name": "Simran",
+        "type": "Student",
+        "registerNumber": "6677889900",
+        "department": "Science And Humanities",
+        "batch": "19",
+        "email": "simran@gmail.com",
+        "mobileNumber": "6677889900",
+        "grievance": "No response to queries",
+        "aadharNumber": "667788990011"
+      },
+      {
+        "name": "Karan",
+        "type": "Student",
+        "registerNumber": "7788990011",
+        "department": "Civil",
+        "batch": "20",
+        "email": "karan@gmail.com",
+        "mobileNumber": "7788990011",
+        "grievance": "Classroom not accessible",
+        "aadharNumber": "778899001122"
+      },
+      {
+        "name": "Vikram",
+        "type": "Student",
+        "registerNumber": "8899001122",
+        "department": "Computer Science",
+        "batch": "21",
+        "email": "vikram@gmail.com",
+        "mobileNumber": "8899001122",
+        "grievance": "Lab equipment malfunction",
+        "aadharNumber": "889900112233"
+      },
+      {
+        "name": "Aditi",
+        "type": "Student",
+        "registerNumber": "9900112233",
+        "department": "Mechanical",
+        "batch": "22",
+        "email": "aditi@gmail.com",
+        "mobileNumber": "9900112233",
+        "grievance": "Delay in results",
+        "aadharNumber": "990011223344"
+      },
+      {
+        "name": "Sandeep",
+        "type": "Student",
+        "registerNumber": "1011122233",
+        "department": "Electrical And Electronics",
+        "batch": "23",
+        "email": "sandeep@gmail.com",
+        "mobileNumber": "1011122233",
+        "grievance": "No access to online resources",
+        "aadharNumber": "101112223355"
+      },
+      {
+        "name": "Neha",
+        "type": "Student",
+        "registerNumber": "1122334455",
+        "department": "Electronics And Communication",
+        "batch": "24",
+        "email": "neha@gmail.com",
+        "mobileNumber": "1122334455",
+        "grievance": "Technical error in submission",
+        "aadharNumber": "112233445577"
+      },
+      {
+        "name": "Anjali",
+        "type": "Student",
+        "registerNumber": "2233445566",
+        "department": "Electronics And Instrumentation",
+        "batch": "25",
+        "email": "anjali@gmail.com",
+        "mobileNumber": "2233445566",
+        "grievance": "Faculty availability issue",
+        "aadharNumber": "223344556688"
+      },
+      {
+        "name": "Gopal",
+        "type": "Student",
+        "registerNumber": "3344556677",
+        "department": "Information Technology",
+        "batch": "26",
+        "email": "gopal@gmail.com",
+        "mobileNumber": "3344556677",
+        "grievance": "Course material not provided",
+        "aadharNumber": "334455667799"
+      },
+      {
+        "name": "Aman",
+        "type": "Student",
+        "registerNumber": "4455667788",
+        "department": "Science And Humanities",
+        "batch": "27",
+        "email": "aman@gmail.com",
+        "mobileNumber": "4455667788",
+        "grievance": "Class hours mismatched",
+        "aadharNumber": "445566778811"
+      },
+      {
+        "name": "Arun",
+        "type": "Student",
+        "registerNumber": "5566778899",
+        "department": "Civil",
+        "batch": "28",
+        "email": "arun@gmail.com",
+        "mobileNumber": "5566778899",
+        "grievance": "Requesting more tutorials",
+        "aadharNumber": "556677889900"
+      },
+      {
+        "name": "Kriti",
+        "type": "Student",
+        "registerNumber": "6677889900",
+        "department": "Computer Science",
+        "batch": "29",
+        "email": "kriti@gmail.com",
+        "mobileNumber": "6677889900",
+        "grievance": "Assignment confusion",
+        "aadharNumber": "667788990022"
+      },
+      {
+        "name": "Jai",
+        "type": "Student",
+        "registerNumber": "7788990011",
+        "department": "Mechanical",
+        "batch": "30",
+        "email": "jai@gmail.com",
+        "mobileNumber": "7788990011",
+        "grievance": "Server crash during exam",
+        "aadharNumber": "778899001133"
+      }
+    ]
+  }
+  

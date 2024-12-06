@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-06T06:58:20.582Z",
+    "end": "2024-12-06T06:59:51.486Z",
+    "duration": 90904,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c58b2e40-0370-4bed-aeee-9f410c237823",
+      "title": "",
+      "fullFile": "cypress\\e2e\\e2e.cy.js",
+      "file": "cypress\\e2e\\e2e.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eca37307-975e-4c56-b574-47d31ecc9686",
+          "title": "End-to-End Test for RMKEC Website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate through RMKEC website and perform all interactions",
+              "fullTitle": "End-to-End Test for RMKEC Website should navigate through RMKEC website and perform all interactions",
+              "timedOut": null,
+              "duration": 84263,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visit the RMKEC homepage\ncy.visit('https://www.rmkec.ac.in/2023/');\ncy.wait(4000);\n// Close any initial pop-up\ncy.get('[aria-label=\"Close\"]').click();\n// Test Navigation through Slides\ncy.get('[aria-label=\"Slide 1\"]').click();\ncy.get('[aria-label=\"Slide 2\"]').click();\n// Test Quick Links - clicking buttons multiple times\nfor (let i = 0; i < 3; i++) {\n  cy.get('#quick_links button').eq(1).click();\n}\n// Test section navigation and link clicks\ncy.contains('section', '28 Years of Excellence28').find('a').click();\ncy.contains('a', 'Vice Chairman').click({\n  force: true\n});\ncy.contains('a', 'Management Team').click({\n  force: true\n});\ncy.contains('a', 'Vision & Mission').click({\n  force: true\n});\ncy.contains('a', 'Quality Policy').click({\n  force: true\n});\ncy.get('.topHeader > .container > .row > :nth-child(1) > .site_logo > .logo > .siteName', {\n  timeout: 10000\n}).should('be.visible') // Ensure the element is visible\n.click(); // Perform the click\ncy.wait(4000);\n// Close popup after navigation\ncy.get('[aria-label=\"Close\"]').click();\n// Interact with Research Carousel - click buttons multiple times\nfor (let i = 0; i < 5; i++) {\n  cy.get('#researchCarousel button').first().click();\n}\n// Interact with Recruitment Carousel - click buttons multiple times\nfor (let i = 0; i < 5; i++) {\n  cy.get('#recruitCarousel button').first().click();\n}\n// Test various links in the navigation menu\ncy.contains('a', 'Administration').click({\n  force: true\n});\ncy.contains('a', 'Governing Board').click({\n  force: true\n});\ncy.contains('a', 'Advisors').click({\n  force: true\n});\ncy.contains('a', 'Principal').click({\n  force: true\n});\ncy.contains('a', 'Dean Research').click({\n  force: true\n});\ncy.contains('li', 'Committee Anti-Ragging').find('i').click();\ncy.contains('a', 'Planning & Monitoring').click({\n  force: true\n});\n// Test dropdown links in the navigation menu\ncy.get('.flexrow > .topName_toggle > .togglemenu > .fa', {\n  timeout: 10000\n}).should('be.visible') // Ensure the element is visible\n.click(); // Click the toggle menu\nconst sectionSelectors = ['#menu-item-474 > [href=\"#\"]',\n// Replace with the actual selector for \"About Us\"\n'#menu-item-507 > :nth-child(1)',\n// Replace with the actual selector for \"Administration\"\n'#menu-item-509 > [href=\"#\"]',\n// Replace with the actual selector for \"Academics\"\n'#menu-item-178 > [href=\"#\"]',\n// Replace with the actual selector for \"Department\"\n'#menu-item-2261 > [href=\"#\"]',\n// Replace with the actual selector for \"Career Development Centre\"\n'#menu-item-18115 > :nth-child(1)',\n// Replace with the actual selector for \"AICTE IDEA Lab\"\n'#menu-item-256 > [href=\"#\"]',\n// Replace with the actual selector for \"Campus\"\n'#menu-item-732 > [href=\"#\"]',\n// Replace with the actual selector for \"Entrepreneurship\"\n'#menu-item-667 > [href=\"#\"]',\n// Replace with the actual selector for \"Accreditation\"\n'#menu-item-685 > [href=\"#\"]' // Replace with the actual selector for \"Contact Us\"\n];\n// Iterate through each selector and interact with the elements\nsectionSelectors.forEach(selector => {\n  cy.get(selector, {\n    timeout: 10000\n  }) // Ensure element exists\n  .scrollIntoView() // Scroll the element into view\n  .should('be.visible') // Check if it's visible\n  .click({\n    force: true\n  }); // Click, forcing if necessary\n});\n// Login Flow: Test the login and reset password features\ncy.contains('a', 'RMK Nextgen Faculty Login').click();\ncy.get('#inputEmail').type('test@test.com'); // Using the correct selector\ncy.get('#inputPassword').type('Pass@123'); // Using the correct selector\ncy.contains('button', 'Login').click(); // Finds the button element containing text 'Login'\ncy.contains('Wrong Email Id or Password!').should('be.visible'); // Adjust based on the expected message\n// Assert successful login (optional, depending on the page)\ncy.url().should('eq', 'https://nextgenfaculty.rmkec.ac.in/login.html');\n// Test forgot password flow\ncy.get('#forget').click(); // Click on the \"Forgot Password?\" link\n// Type email into the email input field\ncy.get('#email').type('test@test.com'); // Use the correct selector for the email input\n// Click the send button to submit the form\ncy.get('#forgot').click(); // Click on the \"Send\" button\n// Assert error message or success message",
+              "err": {},
+              "uuid": "5dcc4836-8a1a-4f35-a13a-a1cf58b2bfcf",
+              "parentUUID": "eca37307-975e-4c56-b574-47d31ecc9686",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5dcc4836-8a1a-4f35-a13a-a1cf58b2bfcf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 84263,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
